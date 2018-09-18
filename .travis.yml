@@ -14,14 +14,11 @@ env:
   - COVERAGE_COVERAGE=yes
 
 install:
-- pip install codecov
 - pip install tox-travis
-- pip freeze
+- pip install codecov
 
 script:
 - tox
-- if [[ $COVERAGE_COVERAGE == 'yes' ]]; then pip install codecov; fi
-- pip freeze
 
 after_success:
-- if [[ $COVERAGE_COVERAGE == 'yes' ]]; then codecov; fi
+  -codecov

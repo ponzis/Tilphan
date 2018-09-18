@@ -15,6 +15,7 @@ env:
 
 install:
 - pip install codecov
+- pip install tox-travis
 - pip freeze
 
 script:

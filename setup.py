@@ -10,7 +10,7 @@ setup(
     author_email='',
     description='',
     entry_points={
-        'tilphan': ['bot = travis.__main__'],
+        'tilphan': ['bot = tilphan'],
     },
     extras_require={
         'docs': [

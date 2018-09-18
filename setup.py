@@ -1,9 +1,9 @@
-from distutils.core import setup
+from setuptools import setup
 
 setup(
     name='Tilphan',
-    version='0.0.01',
-    packages=['tilphan'],
+    version='0.0.1',
+    packages=['tilphan', 'tests'],
     url='',
     license='',
     author='Ponzis',
@@ -15,7 +15,7 @@ setup(
             'sphinx_rtd_theme',
         ],
         'testing': [
-            'pytest>=3.6',
+            'pytest',
         ],
     }
 )

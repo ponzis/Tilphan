@@ -19,8 +19,8 @@ install:
 
 script:
 - tox
-- pip freeze
 - if [[ $COVERAGE_COVERAGE == 'yes' ]]; then pip install codecov; fi
+- pip freeze
 
 after_success:
 - if [[ $COVERAGE_COVERAGE == 'yes' ]]; then codecov; fi

@@ -8,5 +8,17 @@ setup(
     license='',
     author='Ponzis',
     author_email='',
-    description=''
+    description='',
+    entry_points={
+        'tilphan': ['bot = travis.__main__'],
+    },
+    extras_require={
+        'docs': [
+            'sphinx',
+            'sphinx_rtd_theme',
+        ],
+        'testing': [
+            'pytest>=3.6',
+        ],
+    }
 )

@@ -1,17 +1,8 @@
-language: python
-
 sudo: false
-
-cache: pip
+language: python
 
 python:
 - "3.6"
-
-
-env:
-  matrix:
-  - COVERAGE_COVERAGE=no
-  - COVERAGE_COVERAGE=yes
 
 install:
 - pip install tox-travis
@@ -20,5 +11,16 @@ install:
 script:
 - tox
 
-after_success:
-  -codecov
+after_success: coverage combine && codecov
+
+stages:
+- test
+- name: deploy
+  if: tag IS present
+
+jobs:
+  include:
+  - python: 3.6
+    env: TOXENV=docs
+  - python: 3.6
+    env: TOXENV=desc

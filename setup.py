@@ -1,4 +1,4 @@
-from setuptools import setup
+from distutils.core import setup
 
 setup(
     name='Tilphan',
@@ -9,9 +9,6 @@ setup(
     author='Ponzis',
     author_email='',
     description='',
-    entry_points={
-        'tilphan': ['bot = tilphan'],
-    },
     extras_require={
         'docs': [
             'sphinx',

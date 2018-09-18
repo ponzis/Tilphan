@@ -2,18 +2,15 @@ sudo: false
 language: python
 
 python:
-- "2.7"
 - "3.6"
 
 install:
-#- pip install tox
 - pip install tox-travis
-#- pip install codecov
-#- pip install coverage
+- pip install codecov coverage
+
 
 script:
 - tox
 
 after_success:
-# - codecov
-#- coverage combine && codecov
+- coverage combine && codecov

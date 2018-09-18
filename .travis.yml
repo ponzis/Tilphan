@@ -14,6 +14,7 @@ env:
   - COVERAGE_COVERAGE=yes
 
 install:
+- pip install codecov
 - pip freeze
 
 script:
@@ -22,4 +23,4 @@ script:
 - if [[ $COVERAGE_COVERAGE == 'yes' ]]; then pip install codecov; fi
 
 after_success:
-- bash <(curl -s https://codecov.io/bash)
+- if [[ $COVERAGE_COVERAGE == 'yes' ]]; then codecov; fi

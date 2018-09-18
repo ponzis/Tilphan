@@ -22,6 +22,8 @@ setup(
             "pytest-timeout >= 1.3.0, <2",
             "pytest-xdist >= 1.22.2, <2",
             "pytest-randomly >= 1.2.3, <2",
+            "coverage",
+            "codecov",
         ],
         'docs': [
             'sphinx>=1.7.4',

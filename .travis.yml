@@ -1,6 +1,10 @@
 sudo: false
 language: python
 
+branches:
+  except:
+  - gh-pages
+
 python:
 - "2.7"
 - "3.4"

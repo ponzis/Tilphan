@@ -15,7 +15,7 @@ install:
 - pip install coverage
 
 script:
-- tox --installpkg
+- tox
 
 after_success:
 - coverage combine && codecov

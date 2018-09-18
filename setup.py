@@ -3,7 +3,7 @@ from setuptools import setup
 setup(
     name='Tilphan',
     version='',
-    packages=['tests', 'tilphan'],
+    packages=['tilphan'],
     url='',
     license='',
     author='Ponzis',

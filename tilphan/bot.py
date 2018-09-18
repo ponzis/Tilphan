@@ -8,6 +8,9 @@ logger = logging.getLogger(__name__)
 
 
 class TilphanBot(ExtensionManagers, discord.Client):
+    '''
+    This is the pre-made bot that contains all of the required modules to run plugins.
+    '''
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)

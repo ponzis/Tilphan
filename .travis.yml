@@ -1,12 +1,8 @@
 sudo: false
 language: python
 
-branches:
-  except:
-  - gh-pages
 
 python:
-#- "2.7"
 - "3.4"
 
 install:
@@ -19,15 +15,3 @@ script:
 
 after_success:
 - coverage combine && codecov
-
-stages:
-- test
-- name: deploy
-  if: tag IS present
-
-jobs:
-  include:
-  - python: 3.6
-    env: TOXENV=docs
-  - python: 3.6
-    env: TOXENV=desc

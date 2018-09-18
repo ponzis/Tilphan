@@ -1,1 +1,22 @@
 language: python
+
+
+cache: pip
+sudo: false
+python:
+- "3.6"
+
+
+env:
+  matrix:
+  - COVERAGE_COVERAGE=no
+  - COVERAGE_COVERAGE=yes
+
+install:
+- pip install codecov
+- pip freeze
+
+script:
+- tox
+- pip freeze
+- if [[ $COVERAGE_COVERAGE == 'yes' ]]; then pip install codecov; fi

@@ -6,7 +6,8 @@ python:
 - "3.6"
 
 install:
-- pip install tox-travis
+- pip install tox
+#- pip install tox-travis
 - pip install codecov
 - pip install coverage
 

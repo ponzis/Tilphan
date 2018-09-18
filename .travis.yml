@@ -1,6 +1,11 @@
 sudo: false
 language: python
 
+branches:
+  except:
+  - legacy
+  - experimental
+
 python:
 - "3.6"
 
